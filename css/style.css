@@ -43,7 +43,6 @@ header{
   border-radius: 7px;
   padding: 0 0 50px 0;
   flex-basis: 400px;
-  /*Your code here.*/
   /*Take a look at flex-basis*/
 }
 
@@ -96,17 +95,22 @@ header{
 
   /*Requirement 10*/
   header{
-    /*Your code here again.*/  
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
   }
 
   /*Requirement 10*/
   .nav_links{
-    /*Your code here again.*/  
+    display: flex;
+    flex-direction: row;    
+    align-items: flex-end;
   }
 
   /*Requirement 11*/
   .package {
-    /*Your code here again.*/
+    flex-basis: 230px;
+    width: 230px;
   } 
 }
 
@@ -119,11 +123,32 @@ header{
 @media print { 
 
   /*Requirement 13*/
+  body {
+    background-image: none;
+  }
   /*Requirement 14*/
+  nav {
+    width: 100%;
+  }
   /*Requirement 15*/
+  .nav_links {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
   /*Requirement 16*/
+  .price {
+    align-self: center;
+  }
   /*Requirement 17*/
+  .package {
+    border: 2px solid #45ADAD;
+    flex-basis: 200px;
+  }
   /*Requirement 18*/
+  .gallery {
+    display: none;
+  }
  
 }
 
