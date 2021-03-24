@@ -15,6 +15,7 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
 }
 
 /*Requirement 3*/
@@ -75,15 +76,22 @@ header{
 
 /*Requirement 9*/
 #logo{
-   width: 25px;
-   
- 
+   -webkit-name: logo_grow;
+   animation-name: logo_grow;
+   animation-duration: 15s;
 }
 
 /*Keyframes for animation*/
 @-webkit-keyframes logo_grow{
   /*Your code here.*/
-
+  from {
+    width: 25px;
+    opacity: 0;
+  }
+  to {
+    width: 450px;
+    opacity: 1;
+  }
 }
 
 @keyframes logo_grow{
@@ -97,14 +105,18 @@ header{
   header{
     display: flex;
     flex-wrap: nowrap;
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   /*Requirement 10*/
   .nav_links{
     display: flex;
-    flex-direction: row;    
-    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
   }
 
   /*Requirement 11*/
@@ -117,6 +129,11 @@ header{
 /*Requirement 12*/
 /*Add media query to handle reduced-motion*/
 /*Your code here again.*/ 
+@media (prefers-reduced-motion: reduce) {
+  #logo {
+    animation: none;
+  }
+}
 
 
 
